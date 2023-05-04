@@ -2,7 +2,7 @@
 precision highp float;
 #endif
 
-#define NUM_DISCS 100
+#define NUM_DISCS 10
 #define THICKNESS 0.005
 
 struct Ring {
