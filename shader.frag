@@ -2,7 +2,7 @@
 precision highp float;
 #endif
 
-#define NUM_DISCS 10
+#define NUM_RINGS 100
 #define THICKNESS 0.005
 
 struct Ring {
@@ -12,7 +12,7 @@ struct Ring {
     float alpha;
 };
 
-uniform Ring ringData[NUM_DISCS];
+uniform Ring ringData[NUM_RINGS];
 varying vec2 vTextureCoord;
 
 void calculateDisc(in Ring parameters,
@@ -45,7 +45,7 @@ void calculateDisc(in Ring parameters,
 void main() {
     vec4 outColour = vec4(0.0, 0.0, 0.0, 0.0);
 
-    for (int i = 0; i < NUM_DISCS; i++) {
+    for (int i = 0; i < NUM_RINGS; i++) {
         calculateDisc(ringData[i], outColour);
     }
 
